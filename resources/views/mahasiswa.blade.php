@@ -36,8 +36,41 @@
   </nav>
 
 
-  <div class="container" style="margin-left:30px ">
+  <div class="container">
     <h1>halaman mahasiswa</h1>
+
+    <table class="table table-danger table-sm table-hover table-striped table-borde text-center">
+      <thead>
+        <tr>
+          <th>NPM</th>
+          <th>Nama Mahasiswa</th>
+          <th>Jenis Kelamin</th>
+          <th colspan="2">TTL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>123</td>
+          <td>Nichole</td>
+          <td>Laki-laki</td>
+          <td>07-09-2004</td>
+          <td rowspan="3">Dallas</td>
+        </tr>
+        <tr>
+          <td>127</td>
+          <td>Elzan</td>
+          <td>Laki-laki</td>
+          <td>07-09-2000</td>
+        </tr>
+        <tr>
+          <td>129</td>
+          <td>Nathan</td>
+          <td>Laki-laki</td>
+          <td>07-09-1999</td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
