@@ -42,6 +42,14 @@
     <div class="row">
       <div class="col-sm-6">
         <h4>Tabel Mahasiswa</h4>
+      </div>
+      <div class="col-sm-6" style="text-align: right">
+        <a href="/mahasiswa/create" class="btn btn-info btn-sm">Tambah Mahasiswa</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
         <table class="table table-danger table-sm table-hover table-striped table-borde text-center">
           <thead>
             <tr>
@@ -56,43 +64,6 @@
         </table>
     
       </div>
-      <div class="col-sm-6">
-        <h4>Form Mahasiswa</h4>
-        <form action="" method="GET">
-          <div class="row">
-            <div class="col-sm-6">
-              <label for="">NPM</label>
-          <input type="number" name="npm"  class="form-control"placeholder="Input NPM">
-            </div>
-            <div class="col-sm-6">
-              <label for="">Nama Mahasiswa</label>
-              <input type="text" name="nama_mahasiswa"  class="form-control"placeholder= "Input Nama Mahasiswa">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <label for="">Tanggal Lahir</label>
-              <input type="date" name="tgl_lahir"  class="form-control">
-            </div>
-            <div class="col-sm-6">
-              <label for="">Program Studi</label>
-              <select name="prodi"  class="form-control">
-                <option value="1">Sistem Informasi</option>
-                <option value="2">Teknik Informasi</option>
-                <option value="3">Biologi</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <button class="btn btn-primary" style="width: 100%" type="submit">Simpan</button>
-            </div>
-          </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
