@@ -37,42 +37,66 @@
 
 
   <div class="container">
-    <h1>halaman mahasiswa</h1>
+    <h1>Halaman Tambah Mahasiswa</h1>
     
       </div>
       <div class="col-sm-6">
         <h4>Form Mahasiswa</h4>
-        <form action="" method="GET">
+
+        @if ($errors->any())
+            <div class="pt3">
+              <div class="alert danger">
+                <ul>
+                  @foreach ($errors->all() as $item)
+                      <li>{{$item}}</li>
+                  @endforeach
+                </ul>
+              </div>
+            </div>
+        @endif
+
+        <form action="/mahasiswa" method="POST">
+          @csrf
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
               <label for="">NPM</label>
           <input type="number" name="npm"  class="form-control"placeholder="Input NPM">
+          value="{{ Session:: get('npm')}}">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
               <label for="">Nama Mahasiswa</label>
-              <input type="text" name="nama_mahasiswa"  class="form-control"placeholder= "Input Nama Mahasiswa">
+              <input type="text" name="nama_mahasiswa"  class="form-control"placeholder= "Input Nama Mahasiswa" value="{{ Session::get('nama_mahasiswa') }}">
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <label for="">Tanggal Lahir</label>
-              <input type="date" name="tgl_lahir"  class="form-control">
-            </div>
-            <div class="col-sm-6">
-              <label for="">Program Studi</label>
-              <select name="prodi"  class="form-control">
-                <option value="1">Sistem Informasi</option>
-                <option value="2">Teknik Informasi</option>
-                <option value="3">Biologi</option>
+            <div class="col-sm-4">
+              <label for="">Jenis Kelamin</label>
+              <select name="jk" id="" class="form-select">
+                <option>L</option>
+                <option>P</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
-              <button class="btn btn-primary" style="width: 100%" type="submit">Simpan</button>
+            <div class="col-sm-8">
+              <div class="row">
+                <div class="col-sm-5">
+                  <label for="">Tanggal Lahir</label>
+                  <input type="date" name="tgl_lahir"  class="form-control" value="{{Session::get('tgl_lahir')}}">
+                </div>
+                <div class="col-sm-7">
+                  <label for="">Alamat</label>
+                  <input type="text" name="alamat" id="" class="form control"placeholder="Input Alamat" value="{{Session::get('tgl_lahir')}}">
+                </div>
+              </div>
             </div>
-            <div class="col-sm-6">
-              <a href="/mahasiswa"class="btn btn-secondary" style="width: 100%">Kembali</a>
+            <div class="col-sm-4">
+              <div class="row mt-4">
+                <div class="col-sm-6">
+                  <button class="btn btn-primary" style="width: 100%" type="submit">Simpan</button>
+                </div>
+                <div class="col-sm-6">
+                  <a href="/mahasiswa"class="btn btn-secondary" style="width: 100%">Kembali</a>
+                </div>
+              </div>
             </div>
           </div>
           </div>
